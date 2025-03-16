@@ -16,7 +16,7 @@ It includes two main scripts:
 
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/yourusername/PersuasionNLPTools.git
+   git clone https://github.com/jacxhanx/PersuasionNLPTools.git
    cd PersuasionNLPTools
 
 2. (Optional) Create a virtual environment and install dependencies
@@ -80,7 +80,7 @@ Arguments:
 
 ## 📩 Contact
 
-For issues or questions, please open an issue on GitHub.
+For issues or questions, please open an issue on [GitHub](https://github.com/jacxhanx/PersuasionNLPTools/issues).
 
 ## License
 
