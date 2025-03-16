@@ -1,7 +1,7 @@
 # 🛠️ PersuasionNLPTools
 
 ## Overview  
-This repository provides tools for checking the format conformity of submissions and evaluating predictions against gold-standard labels for the [Shared Task on the Detection and Classification of Persuasion Techniques in Texts for Slavic Languages](https://bsnlp.cs.helsinki.fi/shared-task.html)
+This repository provides tools for checking the format conformity of submissions and evaluating predictions against gold-standard labels for the [Shared Task on the Detection and Classification of Persuasion Techniques in Texts for Slavic Languages](https://bsnlp.cs.helsinki.fi/shared-task.html), part of the [SNLP 2025 Workshop](https://bsnlp.cs.helsinki.fi/index.html) that is going to be held in conjunction with the [ACL 2025 Conference](https://2025.aclweb.org/).
 
 
 It includes two main scripts:
@@ -82,4 +82,4 @@ For issues or questions, please open an issue on GitHub.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jacxhanx/PersuasionNLPTools/blob/main/LICENSE) file for details.
