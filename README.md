@@ -3,6 +3,8 @@
 ## Overview  
 This repository provides tools for checking the format conformity of submissions and evaluating predictions against gold-standard labels for the [Shared Task on the Detection and Classification of Persuasion Techniques in Texts for Slavic Languages](https://bsnlp.cs.helsinki.fi/shared-task.html), part of the [SNLP 2025 Workshop](https://bsnlp.cs.helsinki.fi/index.html) that is going to be held in conjunction with the [ACL 2025 Conference](https://2025.aclweb.org/).
 
+The tools in this repository are provided to support task participants in verifying submission formats and evaluating the detection and classification of persuasion techniques for this shared task.
+
 
 It includes two main scripts:
 - `conformity_checker.py` – Ensures submission files are correctly formatted.
