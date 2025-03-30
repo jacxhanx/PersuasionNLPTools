@@ -36,7 +36,7 @@ def check_subtask_1_format(filepath):
                 print(f"Line {i} in Subtask 1 file has an invalid persuasion_flag: {persuasion_flag} in line: {line}")
                 issue_detected = True
     if issue_detected:
-        print("Format check completed. Issues detected in Subtask 1 file.")
+        raise Exception("Format check completed. Issues detected in Subtask 1 file. Invalid submission file.")
     else:
         print("Format check completed without errors. Subtask 1 file.")
 
@@ -77,7 +77,7 @@ def check_subtask_2_format(filepath):
                     print(f"Line {i} in Subtask 2 file contains an invalid label: {label} in line: {line}")
                     issue_detected = True
     if issue_detected:
-        print("Format check completed. Issues detected in Subtask 2 file.")
+        raise Exception("Format check completed. Issues detected in Subtask 2 file. Invalid submission file.")
     else:
         print("Format check completed without errors. Subtask 2 file.")
 
