@@ -19,6 +19,10 @@ def evaluate_subtask_1(gold_filepath, pred_filepath):
     gold["flag"] = gold["flag"].fillna(False)
     pred["flag"] = pred["flag"].fillna(False)
 
+    # Sort both DataFrames to ensure correct alignment
+    gold = gold.sort_values(by=["doc_id", "start", "end"]).reset_index(drop=True)
+    pred = pred.sort_values(by=["doc_id", "start", "end"]).reset_index(drop=True)
+
     # Check if document IDs and offsets match
     if not gold[["doc_id", "start", "end"]].equals(pred[["doc_id", "start", "end"]]):
         raise ValueError("Mismatch in document IDs or offsets between gold and prediction files")
