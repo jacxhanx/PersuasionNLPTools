@@ -4,8 +4,14 @@ import pandas as pd
 import numpy as np
 from itertools import chain
 from config import VALID_LABELS
+from conformity_checker import check_subtask_1_format, check_subtask_2_format
 
 def evaluate_subtask_1(gold_filepath, pred_filepath):
+
+    # Check conformity of the prediciton file
+    check_subtask_1_format(pred_filepath)
+
+    # Load data
     gold = pd.read_csv(gold_filepath, sep="\t", header=None, names=["doc_id", "start", "end", "flag"])
     pred = pd.read_csv(pred_filepath, sep="\t", header=None, names=["doc_id", "start", "end", "flag"])
 
@@ -61,7 +67,10 @@ def load_subtask_2_data(filepath):
 def evaluate_subtask_2(gold_filepath, pred_filepath, per_class_results=False):
     """Evaluates Subtask 2 predictions using micro and macro F1 scores, after format checking."""
     
-    # Load validated data
+    # Check conformity of the prediciton file
+    check_subtask_2_format(pred_filepath)
+    
+    # Load data
     gold = load_subtask_2_data(gold_filepath)
     pred = load_subtask_2_data(pred_filepath)
 
@@ -90,7 +99,6 @@ def evaluate_subtask_2(gold_filepath, pred_filepath, per_class_results=False):
     y_pred = multilabel_binarize(pred_labels, valid_classes)
 
     # Compute evaluation metrics
-    # Calculate Accuracy
     accuracy = accuracy_score(y_true, y_pred)
     micro_precision = precision_score(y_true, y_pred, average="micro")
     micro_recall = recall_score(y_true, y_pred, average="micro")
