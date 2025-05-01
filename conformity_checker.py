@@ -18,7 +18,7 @@ def check_subtask_1_format(filepath):
             doc_id, start, end, persuasion_flag = parts
 
             # Check document ID format
-            if not re.match(r"^\w+\.txt$", doc_id):
+            if not re.match(r".*\.txt$", doc_id):
                 print(f"Line {i} in Subtask 1 file has an invalid document ID: {doc_id} in line: {line}")
                 issue_detected = True
 
@@ -57,7 +57,7 @@ def check_subtask_2_format(filepath):
             doc_id, start, end, *labels = parts
 
             # Check document ID format
-            if not re.match(r"^\w+\.txt$", doc_id):
+            if not re.match(r".*\.txt$", doc_id):
                 print(f"Line {i} in Subtask 2 file has an invalid document ID: {doc_id} in line: {line}")
                 issue_detected = True
 
